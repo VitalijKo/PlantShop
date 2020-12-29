@@ -1,0 +1,4 @@
+Django~=2.2.4
+django-grappelli~=2.14.2
+pillow~=7.2.0
+psycopg2~=2.8.5

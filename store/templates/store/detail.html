@@ -1,0 +1,42 @@
+{% extends 'store/main.html' %}
+{% block title %}{{product.name}}{% endblock title %}
+{% load static %}
+{% block content %}
+
+<style>
+  a{
+    text-decoration: none;
+    color: red;
+    padding: 2px;
+    transition: 1s linear;
+  }
+  a:hover{
+    text-decoration: none;
+    color: yellow;
+  }
+</style>
+
+<div class="flip">
+<a href="{% url 'store:store' %}">
+  <div class="front">Назад</div>
+  <div class="back">Назад</div>
+</a>
+</div>
+
+<br>
+<br>
+
+<div class="container" style="color: white;">
+  <h1>{{product.name}}</h1>
+  <img class="product-image" src="{{product.imageURL}}">
+  {% if product.is_availible %}
+    <p><strong>Наличие: </strong>в наличии</p>
+  {% else %}
+    <p><strong>Наличие: </strong>нет в наличии</p>
+  {% endif %}
+  <p><strong>Категория: </strong><a href="../{{menu}}">{{product.category}}</a></p>
+  <p><strong>Описание: </strong>{{product.description}}</p>
+  <p><strong>Контакты: </strong>{{product.contact}}</p>
+</div>
+
+{% endblock content %}

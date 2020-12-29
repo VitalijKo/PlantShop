@@ -1,0 +1,90 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+	<form class="input-wrapper" data-text="" action="{% url 'store:store' %}">
+		<input type="text" placeholder="Поиск..." name="search">
+	</form>
+
+	<script>
+		const wrapper = document.querySelector(".input-wrapper"),
+		      textInput = document.querySelector("input[type='text']");
+
+		textInput.addEventListener("keyup", event => {
+		  wrapper.setAttribute("data-text", event.target.value);
+		});
+	</script>
+
+
+	<h3 style="color: white;">Категории:</h3>
+
+	<br>
+
+	<a class="mainmenu" href="../" style="text-decoration: none; color: black; background: white; border-radius: 5px;">Все</a>
+	{% for section in menu %}
+			<a class="mainmenu" href="../{{section.url}}" style="text-decoration: none; color: black; background: white; border-radius: 3px;">{{section.name}}</a>
+	{% endfor %}
+
+
+	<br>
+	<br>
+
+	<h3 style="color: white;">Результаты:</h3>
+
+	<div class="row">
+
+
+
+		{% for obj in object_list %}
+		<div class="col-lg-4">
+			<img class="thumbnail" src="{{obj.imageURL}}">
+			<div class="box-element product">
+				<h6><strong>{{obj.name}}</strong></h6>
+				<hr>
+
+				<a class="btn btn-outline-success" href="{% url 'store:detail' obj.id %}">Подробнее</a>
+				<h4 style="display: inline-block; float: right"><strong>{{obj.price}}₽</strong></h4>
+
+			</div>
+		</div>
+		{% endfor %}
+
+	</div>
+
+	<br>
+
+	{% if is_paginated %}
+
+		<nav aria-label="...">
+		  <ul class="pagination">
+
+		    <li class="page-item {% if not prev_url %} disabled {% endif %}">
+		      <a class="page-link" href="{{ prev_url }}" tabindex="-1">Назад</a>
+		    </li>
+
+				{% for n in object_list.paginator.page_range %}
+					{% if object_list.number == n %}
+
+						<li class="page-item active">
+							<a class="page-link" href="?page={{ n }}">{{ n }} <span class="sr-only">(current)</span></a>
+						</li>
+
+					{% elif n > object_list.number|add:-3 and n < object_list.number|add:3 %}
+
+						<li class="page-item">
+							<a class="page-link" href="?page={{ n }}">{{ n }}</a>
+						</li>
+
+					{% endif %}
+
+				{% endfor %}
+
+				<li class="page-item {% if not next_url %} disabled {% endif %}">
+		      <a class="page-link" href="{{ next_url }}" tabindex="-1">Вперёд</a>
+		    </li>
+
+		  </ul>
+		</nav>
+
+	{% endif %}
+{% endblock %}
