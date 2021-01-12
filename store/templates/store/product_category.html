@@ -1,0 +1,140 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block title %}{{category}}{% endblock %}
+{% block content %}
+
+<div id="wrapper" class="s1">
+	<div id="header">
+		<div class="bonnet">
+			<div class="inner clearfix">
+				<div class="left">
+					<div class="vertical-element">
+						<a href="../../"><img style="background: currentColor;" src="../../static/include/logo.png"></a>
+					</div>
+					<div class="vertical-helper"></div>
+				</div>
+				<div class="center">
+					<div class="vertical-element">
+						<p>Интернет-магазин</p>
+					</div>
+					<div class="vertical-helper"></div>
+				</div>
+				<div class="right">
+					<div class="vertical-element">
+						<p style="text-align: right;"> <span style="font-size: 17pt;">+7 (900) 000-00-00</span>
+					</div>
+					<div class="vertical-helper"></div>
+				</div>
+			</div>
+		</div>
+		<div class="navigation">
+			<div class="inner clearfix">
+				<input id="menu-state" type="checkbox" />
+				<label class="menu-btn" for="menu-state"> <span class="menu-btn-icon"></span> </label>
+				<ul id="menu" class="top sm sm-theme sm-flex" style="visibility: hidden;">
+					<li class="selected"> <a href="../">Каталог</a></li>
+					<li> <a href="../../price/">Прайс-лист</a> </li>
+					<li> <a href="../../contacts/">Контакты</a> </li>
+					<li> <a href="../../services/">Услуги</a></li>
+					<li> <a href="../../gallery/">Галерея</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div id="content">
+		<div class="inner clearfix">
+			<div id="sidebar">
+				<ul id="menu" class="left sm sm-theme sm-vertical">
+					{% for section in menu %}
+            {% if section.name == category %}
+              <li class="selected"> <a href="../{{section.url}}">{{section.name}}</a> </li>
+            {% else %}
+						  <li> <a href="../{{section.url}}">{{section.name}}</a> </li>
+            {% endif %}
+					{% endfor %}
+				</ul>
+				<div class="box"> <i>Цель нашей компании - предложение широкого ассортимента товаров и услуг на постоянно высоком качестве обслуживания.</i> </div>
+			</div>
+			<div id="workarea" class="partial clearfix">
+				<div id="breadcrumbs" class="default"> <span>
+							<a href="../../" title="Главная">Главная</a>
+					</span> <span>>
+							<a href="../" title="Каталог товаров"> Каталог товаров</a>
+					</span> <span>> {{category}}</span> </div>
+				<h1 class="title">{{category}}</h1>
+				<div id="catalog" class="default">
+					<div class="text-before">
+						<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона</p>
+					</div>
+					<div id="catalog-section-list" class="subsections"> </div>
+					<div class="options clearfix">
+						<div class="items-count">
+							<label>Товаров:</label> <strong>{{count}}</strong> </div>
+					<div id="catalog-section" class="table">
+						<div class="elements clearfix">
+							{% for obj in object_list %}
+								<div class="element clearfix" style="width: 25%; display: block; box-sizing: border-box; float: left; width: 200px; height: 350px;">
+									<div style="line-height: 1.2; position: relative; height: 98.75%; margin: 2px; padding: 20px; transition: box-shadow .15s ease-in-out; width: 200px; height: 350px; box-shadow: 0 1px 3px rgba(0,0,0,.15);">
+										<div class="picture">
+											<a href="{% url 'store:detail' obj.id %}"> <img src="../static{{obj.imageURL}}" style="width: 165px; height: 125px;"/> </a>
+										</div>
+										<div class="title" style="font: 15px/20px 'Roboto', sans-serif;"> <a href="{% url 'store:detail' obj.id %}" style="font-weight: 500;">{{obj.name}}</a> </div>
+										<div class="preview-text"><p style="font: 15px/20px 'Roboto', sans-serif; word-break: break-all;">{{obj.description}}</p></div>
+                    {% if obj.is_availible == True %}
+                      <div class="status"> <span style="background-color: #3cc051; font-size: 80%; padding: 4px 8px; color: #fff;">В наличии</span> </div>
+                    {% else %}
+                      <div class="status"> <span style="background-color: #ff4d00; font-size: 80%; padding: 4px 8px; color: #fff;">Нет в наличии</span> </div>
+                    {% endif %}
+										<div class="price" style="margin-top: 15px;">
+											<div class="actual"> <span class="value" style="font: 15px/20px 'Roboto', sans-serif; font-weight: 500; font-size: 130%;">{{obj.price}}</span> <span class="currency" style="font: 15px/20px 'Roboto', sans-serif; font-weight: 500; font-size: 130%;">руб.</span> </div>
+										</div>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+					<div class="text-after">
+						<h3>Что такое Lorem Ipsum?</h3>
+						<p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.</p>
+						<ul>
+							<li>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации</li>
+							<li>Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца</li>
+							<li>Классический текст Lorem Ipsum, используемый с XVI века, приведён ниже.</li>
+						</ul>
+						<h4>Есть много вариантов Lorem Ipsum</h4>
+						<p>Но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="inner clearfix">
+			<div class="left"> © ООО "Компания", 2000 — 2021
+				<br> Все права защищены. </div>
+			<div class="center"> 199333 Санкт-Петербург,
+				<br> пр. Пятилеток дом 1, офис 100
+				<br> <i class="fa fa-map-marker"></i> <a href="../../contacts/">карта проезда</a> </div>
+      <script>
+      function ScrollUp(){
+          var t,s;
+          s=document.body.scrollTop||window.pageYOffset;
+          t=setInterval(function(){if(s>0)window.scroll(0,s-=5);else clearInterval(t)},5);
+      }
+      </script>
+      <a href="#top"
+         onclick="ScrollUp();return!1;"
+         style="display:block;position:fixed;
+              bottom:30px;right:30px;
+              width:64px;height:32px;padding:12px 10px 2px;font-size:16px;
+              opacity:0.7;
+              background:#ddd;
+              -webkit-border-radius:15px;
+              -moz-border-radius:15px;
+              border-radius:100px"><img src="../static/include/up.png" style="width: 64px; height: 64px;"></a>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

@@ -25,7 +25,7 @@ SECRET_KEY = '6hmu#cpp%618s4oj*)&k_#)ftp@l#)iz^^u#vi%c4!)roz3)%+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
