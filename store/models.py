@@ -81,3 +81,52 @@ class Gallery(models.Model):
 		except:
 			url = ''
 		return url
+
+class SCategory(models.Model):
+	name = models.CharField('Название категории', max_length=50)
+	url = models.SlugField('URL', max_length=200, unique=True, default='')
+	image = models.ImageField('Фото', null=True, blank=True)
+	description = models.TextField('Описание', default='')
+	objects = models.Manager()
+
+	class Meta:
+		verbose_name = 'Категория услуг'
+		verbose_name_plural = 'Категории услуг'
+
+	def __str__(self):
+		return self.name
+
+	@property
+	def imageURL(self):
+		try:
+			url = self.image.url
+		except:
+			url = ''
+		return url
+
+class SProduct(models.Model):
+	category = models.ForeignKey(SCategory, verbose_name='Катерогия услуг', on_delete=models.SET_NULL, null=True)
+	name = models.CharField('Название услуги', max_length=200)
+	price = models.FloatField('Цена')
+	image = models.ImageField('Фото', null=True, blank=True)
+	description = models.TextField('Описание', default='')
+	contact = models.TextField('Контакты', default='')
+	objects = models.Manager()
+
+	class Meta:
+		verbose_name = 'Услуга'
+		verbose_name_plural = 'Услуги'
+
+	def __str__(self):
+		return self.name
+
+	def is_availible(self):
+		return self.availability
+
+	@property
+	def imageURL(self):
+		try:
+			url = self.image.url
+		except:
+			url = ''
+		return url

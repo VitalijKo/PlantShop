@@ -1,0 +1,124 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block title %}{{product.name}}{% endblock %}
+{% block content %}
+
+<div id="wrapper" class="s1">
+	<div id="header">
+		<div class="bonnet">
+			<div class="inner clearfix">
+				<div class="left">
+					<div class="vertical-element">
+						<a href="../../../"><img style="background: currentColor;" src="../../../static/include/logo.png"></a>
+					</div>
+					<div class="vertical-helper"></div>
+				</div>
+				<div class="center">
+					<div class="vertical-element">
+						<p>Интернет-магазин</p>
+					</div>
+					<div class="vertical-helper"></div>
+				</div>
+				<div class="right">
+					<div class="vertical-element">
+						<p style="text-align: right;"> <span style="font-size: 17pt;">+7 (900) 000-00-00</span>
+					</div>
+					<div class="vertical-helper"></div>
+				</div>
+			</div>
+		</div>
+		<div class="navigation">
+			<div class="inner clearfix">
+				<input id="menu-state" type="checkbox" />
+				<label class="menu-btn" for="menu-state"> <span class="menu-btn-icon"></span> </label>
+				<ul id="menu" class="top sm sm-theme sm-flex" style="visibility: hidden;">
+					<li> <a href="../../">Каталог</a></li>
+					<li> <a href="../../../price/">Прайс-лист</a> </li>
+					<li> <a href="../../../gallery/">Галерея</a></li>
+					<li class="selected"> <a href="../../../services/">Услуги</a></li>
+					<li> <a href="../../../contacts/">Контакты</a> </li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div id="content">
+		<div class="inner clearfix">
+			<div id="sidebar">
+				<ul id="menu" class="left sm sm-theme sm-vertical">
+					{% for section in menu %}
+						{% if section.name == product.category.name %}
+							<li class="selected"> <a href="../{{section.url}}">{{section.name}}</a> </li>
+						{% else %}
+							<li> <a href="../{{section.url}}">{{section.name}}</a> </li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+				<div class="box"> <i>Цель нашей компании - предложение широкого ассортимента товаров и услуг на постоянно высоком качестве обслуживания.</i> </div>
+			</div>
+			<div id="workarea" class="partial clearfix">
+				<div id="breadcrumbs" class="default"> <span>
+							<a href="../../../" title="Главная">Главная</a>
+					</span> <span>>
+							<a href="../../" title="Каталог товаров">Каталог услуг</a>
+					</span> <span>> {{product.category.name}}</span> </div>
+				<h1 class="title">{{product.name}}</h1>
+				<div id="catalog" class="default">
+					<div id="catalog-element" class="default">
+						<div class="card clearfix">
+							<div class="col-left">
+								<div class="swiper-container pictures">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<a class="fancybox" href="{{product.imageURL}}" rel="group-502"> <img src="{{product.imageURL}}" alt="{{product.name}}" title="{{product.name}}" style="width: 420px; height: 315px;"> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-right">
+								<div class="info">
+									<div class="price">
+										<div class="actual" style="margin-top: 15px;"> <span class="value" style="font-size: 185%; font-weight: 500;">{{product.price}}</span> <span class="currency" style="font-size: 185%; font-weight: 500;">руб.</span> </div>
+									</div>
+                  <div class="detail-text clearfix">
+      							<h2>Описание</h2>{{product.description}}</div>
+								</div>
+							</div>
+						</div>
+            <div class="detail-text clearfix">
+              <h2>Контакты</h2><strong>{{product.contact}}</strong></div>
+            <br>
+						<div class="back-link"> <a href="../"><img src="../static/include/back.png" style="width: 32px; height: 32px; margin-right: 5px;">Назад в раздел</a> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="inner clearfix">
+			<div class="left"> © ООО "Компания", 2000 — 2021
+				<br> Все права защищены. </div>
+			<div class="center"> 199333 Санкт-Петербург,
+				<br> пр. Пятилеток дом 1, офис 100
+				<br> <i class="fa fa-map-marker"></i> <a href="../../../contacts/">карта проезда</a> </div>
+      <script>
+      function ScrollUp(){
+          var t,s;
+          s=document.body.scrollTop||window.pageYOffset;
+          t=setInterval(function(){if(s>0)window.scroll(0,s-=5);else clearInterval(t)},5);
+      }
+      </script>
+      <a href="#top"
+         onclick="ScrollUp();return!1;"
+         style="display:block;position:fixed;
+              bottom:30px;right:30px;
+              opacity:0.7;
+              background:#ddd;
+              -webkit-border-radius:15px;
+              -moz-border-radius:15px;
+              border-radius:100px"><img src="../static/include/up.png" style="width: 64px; height: 64px;"></a>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

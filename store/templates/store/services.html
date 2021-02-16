@@ -1,6 +1,6 @@
 {% extends 'store/main.html' %}
 {% load static %}
-{% block title %}О компании{% endblock %}
+{% block title %}Каталог услуг{% endblock %}
 {% block content %}
 
 <div id="wrapper" class="s1">
@@ -35,36 +35,48 @@
 						<li> <a href="../products/">Каталог</a></li>
 						<li> <a href="../price/">Прайс-лист</a> </li>
 						<li> <a href="../gallery/">Галерея</a></li>
-						<li class="selected"> <a href="../services/">Услуги</a></li>
+						<li class="selected"> <a href="">Услуги</a></li>
 						<li> <a href="../contacts/">Контакты</a> </li>
-					</ul>
-				</div>
+          </ul>
+        </div>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 		<div id="content">
 			<div class="inner clearfix">
 				<div id="sidebar">
+					<ul id="menu" class="left sm sm-theme sm-vertical">
+						{% for section in menu %}
+							<li> <a href="../s/{{section.url}}">{{section.name}}</a> </li>
+						{% endfor %}
+					</ul>
 					<div class="box"> <i>Цель нашей компании - предложение широкого ассортимента товаров и услуг на постоянно высоком качестве обслуживания.</i> </div>
 				</div>
 				<div id="workarea" class="partial clearfix">
 					<div id="breadcrumbs" class="default"> <span>
 							<a href="../" title="Главная">Главная</a>
-					</span> <span>>
-							Услуги					</span> </div>
-					<h1 class="title">Услуги</h1>
-					<div> <img src="../static/include/about.jpg" class="img-responsive"> </div>
-					<h3>Все услуги, предоставляемые компанией</h3>
-					<p>Текст...</p>
-					<ul>
-						<li>Восприятие сотрудником себя как субъекта, чья профессионально-трудовая деятельность влияет на общую результативность деятельности предприятия и определяет стратегию его развития.</li>
-						<li>Осознанное принятие личной ответственности за общий продукт совместной деятельности организации. Добросовестное отношение к своим производственным обязанностям становится нормой поведения работника. Общественное мнение негативно настроено к проявлениям фиктивной трудовой активности.</li>
-						<li>Ориентация сотрудника на поиск, разработку, выбор и воплощение наиболее оптимальных способов осуществления своей деятельности. У работников формируется ощущение ответственности за качество продукта и порождает заинтересованность в его повышении. Трудовая деятельность любого вида приобретает творческий характер, что создает общую атмосферу увлеченности своей работой.</li>
-						<li>Профессионально-трудовая деятельность позитивно влияет на личностное развитие.</li>
-						<li>Ощущение взаимоадекватности личных и коллективных критериев собственной ценности. Успешность сотрудника в результате становится основанием как для самоуважения, так и для уважения со стороны коллег. Повышается эффективность делового взаимодействия, что является объективным условием установления доброжелательных межличностных отношений в коллективе.</li>
-					</ul>
-					<p> Примером данной ситуации могут служить большие компании, которые стремятся к высокопроизводительным процессам, включая клиентский сервис. И если вчера это было их преимуществом, то сегодня, в связи с ростом требований потребителей к индивидуальному обслуживанию, это скорее конкурентная слабость. </p>
-					<p> В результате подобного клиентского сервиса, клиент вынужден слушать голос автоинформатора: «Спасибо, что позвонили в нашу компанию, все операторы сейчас заняты, вам обязательно ответят в порядке очереди». Опять все в очередь! Неправда ли, мотивация возникает (бросить трубку), удовлетворенность – нет. </p>
+					</span> <span>
+							> Каталог услуг					</span> </div>
+					<h1 class="title">Каталог услуг</h1>
+					<div id="catalog" class="default">
+						<div id="catalog-section-list" class="default">
+							<div class="elements clearfix">
+								{% for section in menu %}
+									<div class="element clearfix">
+										<div class="picture" style="float: left;">
+											<a href="../s/{{section.url}}"> <img src="{{section.imageURL}}" width="200" height="150" /> </a>
+										</div>
+										<div class="overflow" style="float: left;">
+											<div class="title" style="float: left;">&nbsp;&nbsp;&nbsp;&nbsp;<a href="../s/{{section.url}}">{{section.name}}</a> </div>
+										<div class="description">&nbsp;&nbsp;&nbsp;&nbsp;{{section.description}}</div>
+									</div>
+								</div>
+
+                <hr>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -90,7 +102,7 @@
 				        background:#ddd;
 				        -webkit-border-radius:15px;
 				        -moz-border-radius:15px;
-				        border-radius:100px;"><img src="../static/include/up.png" style="width: 64px; height: 64px;"></a>
+				        border-radius:100px"><img src="../static/include/up.png" style="width: 64px; height: 64px;"></a>
 			</div>
 		</div>
 	</div>
