@@ -13,15 +13,9 @@
 					</div>
 					<div class="vertical-helper"></div>
 				</div>
-				<div class="center">
-					<div class="vertical-element">
-						<p>Интернет-магазин</p>
-					</div>
-					<div class="vertical-helper"></div>
-				</div>
 				<div class="right">
 					<div class="vertical-element">
-						<p style="text-align: right;"> <span style="font-size: 17pt;">+7 (900) 000-00-00</span>
+						<p style="text-align: right;"> <span style="font-size: 17pt;">(8452) 40-01-51 <br> 8-903-384-49-84</span>
 					</div>
 					<div class="vertical-helper"></div>
 				</div>
@@ -54,7 +48,7 @@
             {% endif %}
 					{% endfor %}
 				</ul>
-				<div class="box"> <i>Цель нашей компании - предложение широкого ассортимента товаров и услуг на постоянно высоком качестве обслуживания.</i> </div>
+				<div class="box"> <i>Цель нашей компании - предложение широкого ассортимента товаров и услуг высокого качества.</i> </div>
 			</div>
 			<div id="workarea" class="partial clearfix">
 				<div id="breadcrumbs" class="default"> <span>
@@ -80,7 +74,8 @@
 											<a href="{% url 'store:detail' obj.id %}"> <img src="../static{{obj.imageURL}}" style="width: 165px; height: 125px;"/> </a>
 										</div>
 										<div class="title" style="font: 15px/20px 'Roboto', sans-serif;"> <a href="{% url 'store:detail' obj.id %}" style="font-weight: 500;">{{obj.name}}</a> </div>
-										<div class="preview-text"><p style="font: 15px/20px 'Roboto', sans-serif; word-break: break-all;">{{obj.description}}</p></div>
+										<!--<div class="preview-text"><p style="font: 15px/20px 'Roboto', sans-serif; word-break: break-all;">{{obj.description}}</p></div>-->
+										<br>
                     {% if obj.is_availible == True %}
                       <div class="status"> <span style="background-color: #3cc051; font-size: 80%; padding: 4px 8px; color: #fff;">В наличии</span> </div>
                     {% else %}
@@ -111,7 +106,7 @@
 	</div>
 	<div id="footer">
 		<div class="inner clearfix">
-			<div class="left"> © ООО "Компания", 2000 — 2021
+			<div class="left"> © ООО "Питомник растений Вита Плант", 2000 — 2021
 				<br> Все права защищены. </div>
 			<div class="center"> 199333 Санкт-Петербург,
 				<br> пр. Пятилеток дом 1, офис 100
