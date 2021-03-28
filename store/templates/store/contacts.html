@@ -8,8 +8,8 @@
 		<div class="bonnet">
 			<div class="inner clearfix">
 				<div class="left">
-					<div class="vertical-element">
-						<a href="../"><img style="background: currentColor;" src="../static/include/logo.png"></a>
+					<div class="vertical-element" style="margin-top: -8%; position: inherit;">
+						<a href="../"><img style="background: currentColor;" src="../static/include/logo.png" width="500" height="200"></a>
 					</div>
 					<div class="vertical-helper"></div>
 				</div>
@@ -46,6 +46,7 @@
 				<h1 class="title">Контакты</h1>
 				<div class="clearfix">
 					<div class="col-left">
+						<p><b>Для уточнения цены на товар и наличия товара обратитесь к менеджеру</b></p>
 						<h4> Питомник растений Вита Плант </h4>
 						<p> <b>Адрес</b>
 							<br> г. Саратов, Вольский тракт, 4б </p>
@@ -58,86 +59,45 @@
 							<br> C апреля по ноябрь ежедневно с 9.00 до 18.00 </p>
 					</div>
 					<div class="col-right">
-						<script type="text/javascript">
-						function BX_SetPlacemarks_MAP_mF8Ev4(map) {
-							if(typeof window["BX_YMapAddPlacemark"] != 'function') {
-								/* If component's result was cached as html,
-								 * script.js will not been loaded next time.
-								 * let's do it manualy.
-								 */
-								(function(d, s, id) {
-									var js, bx_ym = d.getElementsByTagName(s)[0];
-									if(d.getElementById(id)) return;
-									js = d.createElement(s);
-									js.id = id;
-									js.src = "/bitrix/components/bitrix/map.yandex.view/templates/.default/script.js";
-									bx_ym.parentNode.insertBefore(js, bx_ym);
-								}(document, 'script', 'bx-ya-map-js'));
-								var ymWaitIntervalId = setInterval(function() {
-									if(typeof window["BX_YMapAddPlacemark"] == 'function') {
-										BX_SetPlacemarks_MAP_mF8Ev4(map);
-										clearInterval(ymWaitIntervalId);
-									}
-								}, 300);
-								return;
-							}
-							var arObjects = {
-								PLACEMARKS: [],
-								POLYLINES: []
-							};
-							arObjects.PLACEMARKS[arObjects.PLACEMARKS.length] = BX_YMapAddPlacemark(map, {
-								'LON': '37.493155949217',
-								'LAT': '55.679728052338',
-								'TEXT': 'Отметка на карте'
-							});
-						}
-						</script>
 						<div class="bx-yandex-view-layout">
 							<div class="bx-yandex-view-map">
-								<script>
-								var script = document.createElement('script');
-								script.src = 'https://api-maps.yandex.ru/2.0/?load=package.full&mode=release&lang=ru-RU&wizard=bitrix';
-								(document.head || document.documentElement).appendChild(script);
-								script.onload = function() {
-									this.parentNode.removeChild(script);
-								};
-								</script>
-								<script type="text/javascript">
-								if(!window.GLOBAL_arMapObjects) window.GLOBAL_arMapObjects = {};
+								<div id="map" style="width: 600px; height: 400px"></div>
 
-								function init_MAP_mF8Ev4() {
-									if(!window.ymaps) return;
-									var node = BX("BX_YMAP_MAP_mF8Ev4");
-									node.innerHTML = '';
-									var map = window.GLOBAL_arMapObjects['MAP_mF8Ev4'] = new ymaps.Map(node, {
-										center: [55.680725839518, 37.495254726848],
-										zoom: 13,
-										type: 'yandex#map'
-									});
-									if(map.behaviors.isEnabled("scrollZoom")) map.behaviors.disable("scrollZoom");
-									map.behaviors.enable("dblClickZoom");
-									map.behaviors.enable("drag");
-									if(map.behaviors.isEnabled("rightMouseButtonMagnifier")) map.behaviors.disable("rightMouseButtonMagnifier");
-									map.controls.add('zoomControl');
-									map.controls.add('typeSelector');
-									map.controls.add('scaleLine');
-									if(window.BX_SetPlacemarks_MAP_mF8Ev4) {
-										window.BX_SetPlacemarks_MAP_mF8Ev4(map);
-									}
-								}
-								(function bx_ymaps_waiter() {
-									if(typeof ymaps !== 'undefined') ymaps.ready(init_MAP_mF8Ev4);
-									else setTimeout(bx_ymaps_waiter, 100);
-								})();
-								/* if map inits in hidden block (display:none)
-								 *  after the block showed
-								 *  for properly showing map this function must be called
-								 */
-								function BXMapYandexAfterShow(mapId) {
-									if(window.GLOBAL_arMapObjects[mapId] !== undefined) window.GLOBAL_arMapObjects[mapId].container.fitToViewport();
-								}
+								<script type="text/javascript">
+								    ymaps.ready(init);
+
+								    function init() {
+								        var myMap = new ymaps.Map("map", {
+								            center: [51.632122, 45.982523],
+								            zoom: 12,
+								            controls: [
+
+								                'zoomControl',
+								                'rulerControl',
+								                'routeButtonControl',
+								                'trafficControl',
+								                'typeSelector',
+								                'fullscreenControl',
+
+								                new ymaps.control.SearchControl({
+								                    options: {
+								                        size: 'large',
+								                        provider: 'yandex#search'
+								                    }
+								                })
+
+								            ]
+								        });
+
+								        var myPlacemark = new ymaps.Placemark([51.632122, 45.982523], {
+								            hintContent: 'C апреля по ноябрь ежедневно с 9.00 до 18.00',
+								            balloonContent: 'ВитаПлант'
+								        });
+
+								        myMap.geoObjects.add(myPlacemark);
+
+								    }
 								</script>
-								<div id="BX_YMAP_MAP_mF8Ev4" class="bx-yandex-map" style="height: 430px; width: 100%;max-width: 100%;">загрузка карты...</div>
 							</div>
 						</div>
 					</div>
@@ -149,8 +109,7 @@
 		<div class="inner clearfix">
 			<div class="left"> © ООО "Питомник растений Вита Плант", 2000 — 2021
 				<br> Все права защищены. </div>
-			<div class="center"> 199333 Санкт-Петербург,
-				<br> пр. Пятилеток дом 1, офис 100
+			<div class="center"> г. Саратов, Вольский тракт, 4б
 				<br> <i class="fa fa-map-marker"></i> <a href="">карта проезда</a> </div>
 		</div>
 	</div>
