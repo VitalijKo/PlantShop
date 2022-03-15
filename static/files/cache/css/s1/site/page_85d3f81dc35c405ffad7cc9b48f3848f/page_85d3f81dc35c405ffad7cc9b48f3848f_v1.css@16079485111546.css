@@ -1,0 +1,63 @@
+
+
+/* Start:/bitrix/templates/kolibri_corplite/components/bitrix/news/.default/style.css?159285650163*/
+#news.default {
+    position: relative;
+    width: 100%;
+}
+
+/* End */
+
+
+/* Start:/bitrix/templates/kolibri_corplite/components/bitrix/news/.default/bitrix/news.detail/.default/style.css?15928565011003*/
+#news-detail.default {
+    position: relative;
+    width: 100%;
+}
+#news-detail.default .date {
+    margin-bottom: 20px;
+}
+#news-detail.default .date span {
+    font-size: 90%;
+    margin-right: 7px;
+    padding: 3px 7px;
+    border-radius: .25em;
+}
+#news-detail.default .picture {
+    max-width: 100%;
+	margin-bottom: 20px;
+    text-align: center;
+}
+#news-detail.default .picture img {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+#news-detail.default .detail-text {
+    min-height: 1px;
+}
+#news-detail.default .share {
+    float: right;
+}
+#news-detail.default .back-link {
+    float: left;
+}
+#news-detail.default .back-link a:before {
+    font-family: 'FontAwesome';
+    line-height: 29px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-right: 14px;
+    padding-right: 1px;
+    content: '\f053';
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+/* End */
+/* /bitrix/templates/kolibri_corplite/components/bitrix/news/.default/style.css?159285650163 */
+/* /bitrix/templates/kolibri_corplite/components/bitrix/news/.default/bitrix/news.detail/.default/style.css?15928565011003 */

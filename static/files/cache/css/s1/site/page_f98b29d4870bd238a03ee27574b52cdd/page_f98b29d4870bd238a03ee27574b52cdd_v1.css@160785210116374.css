@@ -1,0 +1,373 @@
+
+
+/* Start:/bitrix/templates/kolibri_corplite/components/bitrix/catalog/.default/style.css?15928565011167*/
+#catalog.default {
+    position: relative;
+    width: 100%;
+}
+#catalog.default .text-before {
+    margin-bottom: 25px;
+}
+#catalog.default .options {
+    font-size: 95%;
+    margin-bottom: 25px;
+}
+#catalog.default .options .items-count {
+    float: left;
+    margin-right: 50px;
+}
+#catalog.default .options .items-sorting {
+    float: left;
+}
+#catalog.default .options .items-sorting label {
+    margin-right: 5px;
+}
+#catalog.default .options .items-sorting a {
+    margin: 0 7px;
+    text-decoration: none;
+    border-bottom: 1px dashed;
+}
+#catalog.default .options .items-sorting a.selected {
+    border-bottom: none;
+}
+#catalog.default .options .items-sorting a.selected.asc:after {
+    font-family: 'FontAwesome';
+    padding-left: 6px;
+    content: '\f0d8';
+    vertical-align: top;
+}
+#catalog.default .options .items-sorting a.selected.desc:after {
+    font-family: 'FontAwesome';
+    padding-left: 6px;
+    content: '\f0d7';
+    vertical-align: top;
+}
+#catalog.default .options .items-view {
+    font-size: 150%;
+    float: right;
+}
+#catalog.default .options .items-view a.selected {
+    cursor: default;
+}
+#catalog.default .text-after {
+    margin-top: 25px;
+}
+/* End */
+
+
+/* Start:/bitrix/templates/kolibri_corplite/components/bitrix/catalog/.default/bitrix/catalog.element/.default/style.css?159285650111412*/
+#catalog-element.default {
+    position: relative;
+    width: 100%;
+}
+#catalog-element.default .card {
+    position: relative;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+#catalog-element.default .card .pictures {
+    text-align: center;
+}
+#catalog-element.default .card .pictures a {
+    display: block;
+    height: 315px;
+}
+#catalog-element.default .card .pictures a img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+#catalog-element.default .card .pictures a:hover img {
+    opacity: .9;
+}
+#catalog-element.default .card .thumbs {
+    height: 80px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+#catalog-element.default .card .thumbs .thumb {
+    width: 80px;
+    height: 100%;
+    opacity: .4;
+}
+#catalog-element.default .card .thumbs .thumb.active {
+    opacity: 1;
+}
+#catalog-element.default .card .thumbs .thumb a img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+    max-width: 100%;
+}
+#catalog-element.default .card .info .marks {
+    margin-bottom: 15px;
+}
+#catalog-element.default .card .info .marks span {
+    font-size: 85%;
+    padding: 2px 8px;
+    border-left: 5px solid;
+}
+#catalog-element.default .card .info .article {
+    font-size: 90%;
+    display: block;
+    margin-bottom: 10px;
+}
+#catalog-element.default .card .info .article span {
+    color: #9e9e9e;
+}
+#catalog-element.default .card .info .preview-text {
+    margin-bottom: 10px;
+}
+#catalog-element.default .card .info .price {
+    margin: 30px 0 20px;
+}
+#catalog-element.default .card .info .price .actual {
+    font-size: 185%;
+    font-weight: 500;
+}
+#catalog-element.default .card .info .price .old {
+    font-size: 90%;
+    margin-top: 5px;
+    color: #9e9e9e;
+}
+#catalog-element.default .card .info .price .missing {
+    font-size: 185%;
+    font-weight: 500;
+}
+#catalog-element.default .card .info .buttons {
+    margin: 20px 0 30px;
+}
+#catalog-element.default .card .info .share {
+    padding-top: 15px;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+#catalog-element.default .card .info .share > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+#catalog-element.default .card .info .share > span {
+    font-size: 80%;
+    margin-right: 10px;
+    color: #9e9e9e;
+}
+#catalog-element.default .features > div {
+    display: table;
+    width: 100%;
+    margin-top: -10px;
+}
+#catalog-element.default .features > div > div {
+    display: table-row;
+}
+#catalog-element.default .features > div > div > div {
+    font-size: 90%;
+    display: table-cell;
+    padding: 2px 0;
+    border-bottom: 1px dotted rgba(0,0,0,.3);
+}
+#catalog-element.default .features > div > div > div.name {
+    font-weight: 400;
+    text-align: left;
+}
+#catalog-element.default .features > div > div > div.name span {
+    position: relative;
+    bottom: -7px;
+    padding-right: 10px;
+    background-color: #fff;
+}
+#catalog-element.default .features > div > div > div.value {
+    font-weight: 300;
+    text-align: right;
+}
+#catalog-element.default .features > div > div > div.value span {
+    position: relative;
+    bottom: -7px;
+    padding-left: 10px;
+    background-color: #fff;
+}
+#catalog-element.default .documents .document {
+    margin-bottom: 10px;
+    padding-left: 40px;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+#catalog-element.default .documents .document.xls,
+#catalog-element.default .documents .document.xlsx {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzMCAzMCIgaGVpZ2h0PSIzMHB4IiBpZD0iTGF5ZXJfMSIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzAgMzAiIHdpZHRoPSIzMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48Zz48cGF0aCBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yOC43MDUsNy41MDZsLTUuNDYxLTYuMzMzbC0xLjA4LTEuMjU0SDkuMjYyICAgYy0xLjczMiwwLTMuMTMzLDEuNDAzLTMuMTMzLDMuMTM2VjcuMDRoMS45NDJMOC4wNywzLjgxOGMwLjAwMi0wLjk3NSwwLjc4Ni0xLjc2NCwxLjc1OC0xLjc2NGwxMS4wMzQtMC4wMXY1LjIyOCAgIGMwLjAwMiwxLjk0NywxLjU3NSwzLjUyMywzLjUyNCwzLjUyM2gzLjgxOWwtMC4xODgsMTUuMDgxYy0wLjAwMywwLjk3LTAuNzksMS43NTMtMS43NTksMS43NjFsLTE2LjU3LTAuMDA4ICAgYy0wLjg4NywwLTEuNjAxLTAuODctMS42MDUtMS45NDJ2LTEuMjc3SDYuMTM4djEuOTA0YzAsMS45MTIsMS4yODIsMy40NjgsMi44NTYsMy40NjhsMTcuODMxLTAuMDA0ICAgYzEuNzMyLDAsMy4xMzctMS40MSwzLjEzNy0zLjEzOVY4Ljk2NkwyOC43MDUsNy41MDYiIGZpbGw9IiM0MzQ0NDAiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PC9wYXRoPjxwYXRoIGQ9Ik0yMC4yMjMsMjUuMzgySDBWNi4wNjhoMjAuMjIzVjI1LjM4MiBNMS45NDMsMjMuNDM4aDE2LjMzM1Y4LjAxMkgxLjk0MyIgZmlsbD0iIzA4NzQzQiI+PC9wYXRoPjxwb2x5bGluZSBmaWxsPSIjMDg3NDNCIiBwb2ludHM9IjE1LjczLDIwLjgyMiAxMi4zMjUsMjAuODIyIDEwLjAwMSwxNy41MzggNy41NjEsMjAuODIyIDQuMTQsMjAuODIyIDguMzg0LDE1LjQ4NiA0Ljk1NywxMC44MTcgICAgOC40MTIsMTAuODE3IDEwLjAxNiwxMy4zNTUgMTEuNzI2LDEwLjgxNyAxNS4yNDIsMTAuODE3IDExLjY0OSwxNS40ODYgMTUuNzMsMjAuODIyICAiPjwvcG9seWxpbmU+PC9nPjwvc3ZnPg==');
+}
+#catalog-element.default .documents .document.rtf,
+#catalog-element.default .documents .document.doc,
+#catalog-element.default .documents .document.docx {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzMCAzMCIgaGVpZ2h0PSIzMHB4IiBpZD0iTGF5ZXJfMSIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzAgMzAiIHdpZHRoPSIzMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48Zz48cGF0aCBkPSJNMjguNjkyLDcuNTg0bC01LjQ1OS02LjMzTDIyLjE1NCwwSDkuMjU3QzcuNTI2LDAsNi4xMjUsMS40MDIsNi4xMjUsMy4xMzR2My45ODRoMS45NDJMOC4wNjYsMy44OTcgICBjMC4wMDItMC45NzQsMC43ODUtMS43NjIsMS43NTctMS43NjJsMTEuMDMtMC4wMVY3LjM1YzAuMDAxLDEuOTQ2LDEuNTc0LDMuNTIyLDMuNTIxLDMuNTIyaDMuODE4bC0wLjE4OCwxNS4wNzQgICBjLTAuMDAyLDAuOTctMC43ODgsMS43NTItMS43NTgsMS43NTlMOS42ODUsMjcuNjk4Yy0wLjg4NiwwLTEuNi0wLjg3MS0xLjYwNC0xLjk0MnYtMS4yNzRINi4xMzV2MS45MDEgICBjMCwxLjkxNCwxLjI4MSwzLjQ2NywyLjg1NCwzLjQ2N2wxNy44MjQtMC4wMDZjMS43MywwLDMuMTM1LTEuNDA5LDMuMTM1LTMuMTM1VjkuMDQzTDI4LjY5Miw3LjU4NCIgZmlsbD0iIzQzNDQ0MCI+PC9wYXRoPjxwYXRoIGQ9Ik0yMC4yMTMsMjUuNDUxSDBWNi4xNDdoMjAuMjEzVjI1LjQ1MSBNMS45NDIsMjMuNTA5aDE2LjMyNlY4LjA5SDEuOTQyIiBmaWxsPSIjMjM3MkJBIj48L3BhdGg+PHBvbHlsaW5lIGZpbGw9IiMyMzcyQkEiIHBvaW50cz0iMTcuMDUyLDExLjkyMiAxNC4wOTgsMjAuODk1IDExLjY0NiwyMC44OTUgOS45NTgsMTUuNjk0IDguMTg4LDIwLjg5NSA1Ljc0NCwyMC44OTUgMi45ODUsMTEuOTIyICAgIDUuNDk4LDExLjkyMiA3LjEwNSwxNy43MjEgOS4wNjMsMTEuOTIyIDEwLjk3NCwxMS45MjIgMTIuNzk2LDE3LjcyMSAxNC41NDMsMTEuOTIyIDE3LjA1MiwxMS45MjIgICI+PC9wb2x5bGluZT48L2c+PC9zdmc+');
+}
+#catalog-element.default .documents .document.pdf {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzMCAzMCIgaGVpZ2h0PSIzMHB4IiBpZD0iTGF5ZXJfMSIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzAgMzAiIHdpZHRoPSIzMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48Zz48cGF0aCBkPSJNMjguNTk1LDcuNTYybC01LjQzOC02LjMwOWwtMS4wNzgtMS4yNUg5LjIyOGMtMS43MjcsMC0zLjEyNCwxLjM5Ny0zLjEyNCwzLjEyNHYzLjk3MUg4LjA0bC0wLjAwMS0zLjIxICAgYzAuMDA0LTAuOTcxLDAuNzg0LTEuNzU2LDEuNzUyLTEuNzU2bDEwLjk5NC0wLjAxdjUuMjA4YzAuMDAxLDEuOTM5LDEuNTY3LDMuNTEsMy41MDcsMy41MWgzLjgwN0wyNy45MSwyNS44NiAgIGMtMC4wMDQsMC45NjctMC43ODQsMS43NDctMS43NTIsMS43NTRMOS42NTIsMjcuNjA2Yy0wLjg4MywwLTEuNTk0LTAuODY2LTEuNi0xLjkzNVYyNC40SDYuMTE0djEuODk2ICAgYzAsMS45MDcsMS4yNzcsMy40NTUsMi44NDUsMy40NTVsMTcuNzYzLTAuMDA1YzEuNzI2LDAsMy4xMjQtMS40MDQsMy4xMjQtMy4xMjZWOS4wMTZMMjguNTk1LDcuNTYyIiBmaWxsPSIjNDM0NDQwIj48L3BhdGg+PHBhdGggZD0iTTIwLjE0NSwyNS4zNjhIMFY2LjEyOWgyMC4xNDVWMjUuMzY4IE0xLjkzNCwyMy40MzJoMTYuMjc0VjguMDY1SDEuOTM0IiBmaWxsPSIjRUE0QzNBIj48L3BhdGg+PHBhdGggZD0iTTEwLjMxNCw5LjA2OSAgIGMwLjMwNSwwLjE0MSwwLjI0MiwwLjMyOCwwLjE0OCwxLjIwMWMtMC4wOTcsMC45MDUtMC40MTQsMi41NTQtMS4wMzIsNC4xNzNjLTAuNjE2LDEuNjIyLTEuNTI5LDMuMjEtMi4zMjUsNC4zOSAgIGMtMC43OTcsMS4xNzgtMS40NzgsMS45NDMtMS45OTgsMi4zODZjLTAuNTE5LDAuNDQxLTAuODgyLDAuNTU5LTEuMTE1LDAuNTk5Yy0wLjIzMywwLjA0LTAuMzM5LDAtMC40MDUtMC4xMTcgICBjLTAuMDYzLTAuMTE4LTAuMDg0LTAuMzE1LTAuMDMxLTAuNTUxYzAuMDUzLTAuMjM0LDAuMTgxLTAuNTEsMC41NDItMC44NjNjMC4zNi0wLjM1NCwwLjk1Ni0wLjc4NSwxLjc4NS0xLjE4OCAgIGMwLjgyOS0wLjQwMiwxLjg5MS0wLjc3NSwyLjc2Mi0xLjAzMXMxLjU1MS0wLjM5MywyLjE0Ni0wLjVjMC41OTUtMC4xMDgsMS4xMDQtMC4xODcsMS42MDQtMC4yMjZjMC41LTAuMDQsMC45ODgtMC4wNCwxLjQ2NywwICAgYzAuNDc4LDAuMDM5LDAuOTQ1LDAuMTE3LDEuMzQ4LDAuMjE2YzAuNDA2LDAuMDk3LDAuNzQ1LDAuMjE3LDEuMDQyLDAuNDAyYzAuMjk5LDAuMTg3LDAuNTUyLDAuNDQxLDAuNjgxLDAuNzI2ICAgYzAuMTI3LDAuMjg2LDAuMTI3LDAuNiwwLjAyMSwwLjgyNWMtMC4xMDUsMC4yMjctMC4zMTgsMC4zNjQtMC41NjMsMC40NDFjLTAuMjQ2LDAuMDgtMC41MjIsMC4wOTktMC44NTEsMCAgIGMtMC4zMy0wLjA5OC0wLjcxMi0wLjMxNC0xLjExNS0wLjU5OWMtMC40MDQtMC4yODQtMC44MjktMC42MzgtMS4zODEtMS4xODdjLTAuNTUzLTAuNTUxLTEuMjMyLTEuMjk4LTEuODA3LTIuMDIzICAgYy0wLjU3My0wLjcyNy0xLjA0MS0xLjQzNC0xLjM1OC0yLjAzM2MtMC4zMTktMC41OTktMC40ODktMS4wOS0wLjYyNy0xLjU4MmMtMC4xMzgtMC40OTEtMC4yNDQtMC45OC0wLjI4Ny0xLjQyMiAgIGMtMC4wNDMtMC40NDMtMC4wMjEtMC44MzcsMC4wMjEtMS4xNDljMC4wNDItMC4zMTUsMC4xMDYtMC41NSwwLjIxMy0wLjcwOGMwLjEwNi0wLjE1NywwLjI1Ni0wLjIzNSwwLjM2Mi0wLjI3NSAgIHMwLjE2OS0wLjA0LDAuMjM0LTAuMDQ5YzAuMDYzLTAuMDA5LDAuMTI2LTAuMDI5LDAuMjIyLDBjMC4wOTQsMC4wMywwLjIxNiwwLjEwNCwwLjM0LDAuMTgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0VBNEMzQSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2Utd2lkdGg9IjAuNzUiPjwvcGF0aD48L2c+PC9zdmc+');
+}
+#catalog-element.default .documents .document.txt {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzMCAzMCIgaGVpZ2h0PSIzMHB4IiBpZD0iTGF5ZXJfMSIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzAgMzAiIHdpZHRoPSIzMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48Zz48cGF0aCBkPSJNMjguNjUsNy41NzVsLTUuNDQ5LTYuMzIybC0xLjA3OS0xLjI1Mkg5LjI0NmMtMS43MywwLTMuMTMsMS40LTMuMTMsMy4xM3YzLjk3OWgxLjkzOUw4LjA1NCwzLjg5MyAgIEM4LjA1OCwyLjkyLDguODM5LDIuMTMzLDkuODEsMi4xMzNsMTEuMDE3LTAuMDF2NS4yMThjMCwxLjk0MywxLjU2OSwzLjUxNywzLjUxMywzLjUxN2gzLjgxNGwtMC4xODgsMTUuMDUxICAgYy0wLjAwMywwLjk3MS0wLjc4NywxLjc1Mi0xLjc1NSwxLjc1N0w5LjY3MSwyNy42NTdjLTAuODg1LDAtMS41OTctMC44NjYtMS42MDMtMS45Mzh2LTEuMjczSDYuMTI2djEuODk5ICAgYzAsMS45MDksMS4yNzksMy40NjIsMi44NSwzLjQ2MmwxNy43OTgtMC4wMDVjMS43MjksMCwzLjEzMS0xLjQwNywzLjEzMS0zLjEzNFY5LjAzMkwyOC42NSw3LjU3NSIgZmlsbD0iIzQzNDQ0MCI+PC9wYXRoPjxwYXRoIGQ9Ik0yMC4xODUsMjUuNDE3SDBWNi4xMzloMjAuMTg1VjI1LjQxNyBNMS45MzgsMjMuNDc2aDE2LjMwNlY4LjA4SDEuOTM4IiBmaWxsPSIjNkI1MzNCIj48L3BhdGg+PHBvbHlsaW5lIGZpbGw9IiM2QjUzM0IiIHBvaW50cz0iMy4wNzcsMTAuOTMxIDE2Ljk4NiwxMC45MzEgMTYuOTg2LDEyLjkxOCAzLjA3NywxMi45MTggMy4wNzcsMTAuOTMxICAiPjwvcG9seWxpbmU+PHBvbHlsaW5lIGZpbGw9IiM2QjUzM0IiIHBvaW50cz0iMy4wNzgsMTQuOTA2IDE2Ljk4OCwxNC45MDYgMTYuOTg4LDE2Ljg5MyAzLjA3OCwxNi44OTMgMy4wNzgsMTQuOTA2ICAiPjwvcG9seWxpbmU+PHBvbHlsaW5lIGZpbGw9IiM2QjUzM0IiIHBvaW50cz0iMy4wNzgsMTguODggMTEuMDI2LDE4Ljg4IDExLjAyNiwyMC44NjggMy4wNzgsMjAuODY4IDMuMDc4LDE4Ljg4ICAiPjwvcG9seWxpbmU+PC9nPjwvc3ZnPg==');
+}
+#catalog-element.default .documents .document span {
+    font-size: 80%;
+    display: block;
+}
+#catalog-element.default .detail-text {
+    margin-bottom: 30px;
+}
+#catalog-element.default .back-link {
+    margin-top: 30px;
+}
+#catalog-element.default .back-link a:before {
+    font-family: 'FontAwesome';
+    line-height: 29px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-right: 14px;
+    padding-right: 1px;
+    content: '\f053';
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+/* End */
+
+
+/* Start:/bitrix/components/kolibri/form.universal/style.css?15928566303125*/
+.kolibri_form_universal {
+    display: none; /* show via FancyBox */
+}
+.kolibri_form_universal form {
+    width: 100%;
+    max-width: 350px;
+}
+.kolibri_form_universal form .form-header {
+    padding: 25px 30px;
+    border-bottom: 5px solid;
+}
+.kolibri_form_universal form .form-header i.fa {
+    font-size: 300%;
+    float: left;
+    margin-right: 15px;
+}
+.kolibri_form_universal form .form-header .title {
+    font-size: 130%;
+    font-weight: 700;
+}
+.kolibri_form_universal form .form-header .text {
+    font-size: 90%;
+    font-weight: 400;
+    margin-top: 5px;
+}
+.kolibri_form_universal form .form-body {
+    padding: 20px 30px;
+    background-color: #f4f4f4;
+}
+.kolibri_form_universal form .form-body .echo div {
+    font-size: 85%;
+    display: none;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 4px;
+}
+.kolibri_form_universal form .form-body .echo .loading {
+    font-size: 135%;
+}
+.kolibri_form_universal form .form-body .echo .success {
+    background-color: #cfff97;
+}
+.kolibri_form_universal form .form-body .echo .nocaptcha,
+.kolibri_form_universal form .form-body .echo .noagrees,
+.kolibri_form_universal form .form-body .echo .nofill,
+.kolibri_form_universal form .form-body .echo .error {
+    background-color: #ffdbdb;
+}
+.kolibri_form_universal form .form-body .row {
+    margin: 3px 0 9px;
+}
+.kolibri_form_universal form .form-body .row label {
+    font-size: 90%;
+    color: #777;
+    display: inline-block;
+    margin-bottom: 2px;
+}
+.kolibri_form_universal form .form-body .row label .star {
+    font-size: 110%;
+    font-weight: normal;
+    vertical-align: middle;
+    color: #e02222;
+}
+.kolibri_form_universal form .form-body .row input[type="text"] {
+    font-size: 95%;
+    width: 100%;
+    height: 37px;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    border-bottom-color: #d7dee3;
+    border-radius: 2px;
+}
+.kolibri_form_universal form .form-body .row textarea {
+    font-size: 95%;
+    line-height: inherit;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    border-bottom-color: #d7dee3;
+    border-radius: 2px;
+    resize: none;
+}
+.kolibri_form_universal form .form-body .row.captcha {
+    margin-top: 20px;
+    display: flex;
+}
+.kolibri_form_universal form .form-body .row.captcha input {
+    margin-right: 10px;
+}
+.kolibri_form_universal form .form-body .row.agrees {
+    margin-top: 15px;
+}
+.kolibri_form_universal form .form-body .row.agrees input[type="checkbox"] {
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin: 1px 8px 0 0;
+    vertical-align: top;
+    cursor: pointer;
+}
+.kolibri_form_universal form .form-body .row.agrees span {
+    line-height: 1.4;
+    font-size: 95%;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+}
+.kolibri_form_universal form .form-footer {
+    padding: 20px 30px;
+}
+.kolibri_form_universal form .form-footer .note {
+    font-size: 85%;
+    float: left;
+    padding: 8px 0;
+}
+.kolibri_form_universal form .form-footer .note .star {
+    color: #e02222;
+}
+.kolibri_form_universal form .form-footer .button {
+    float: right;
+}
+
+/* End */
+/* /bitrix/templates/kolibri_corplite/components/bitrix/catalog/.default/style.css?15928565011167 */
+/* /bitrix/templates/kolibri_corplite/components/bitrix/catalog/.default/bitrix/catalog.element/.default/style.css?159285650111412 */
+/* /bitrix/components/kolibri/form.universal/style.css?15928566303125 */

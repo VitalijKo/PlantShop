@@ -1,0 +1,87 @@
+
+; /* Start:"a:4:{s:4:"full";s:125:"/bitrix/templates/kolibri_corplite/components/bitrix/catalog/.default/bitrix/catalog.element/.default/script.js?1592856501611";s:6:"source";s:111:"/bitrix/templates/kolibri_corplite/components/bitrix/catalog/.default/bitrix/catalog.element/.default/script.js";s:3:"min";s:0:"";s:3:"map";s:0:"";}"*/
+$(document).ready(function() {
+    var pictures = new Swiper('.pictures', {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    
+    var thumbs = new Swiper('.thumbs', {
+        spaceBetween: 10,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+		slideActiveClass: 'active',
+        touchRatio: 0.2,
+        slideToClickedSlide: true,
+    });
+    
+    if (thumbs.el) {
+        pictures.controller.control = thumbs;
+        thumbs.controller.control = pictures;
+    }
+});
+
+/* End */
+;
+; /* Start:"a:4:{s:4:"full";s:66:"/bitrix/components/kolibri/form.universal/script.js?15928566301749";s:6:"source";s:51:"/bitrix/components/kolibri/form.universal/script.js";s:3:"min";s:0:"";s:3:"map";s:0:"";}"*/
+$(document).ready(function() {
+    $(".kolibri_form_universal > form").submit(function() {
+        var $form = $(this),
+            method = $form.attr("method"),
+            action = $form.attr("action"),
+            data = $form.serialize(),
+            ya_goal = $form.data("ya_goal");
+
+        $form.find(".echo div").hide();
+        $form.find(".echo .loading").show();
+        $form.find("[type=\"submit\"]").hide();
+
+        $.ajax({
+            type: method,
+            url: action,
+            data: data,
+            success: function(answer) {
+                $form.find(".echo div").hide();
+                $form.find("[type=\"submit\"]").show();
+
+                if (answer == "success")
+                {
+                    if (ya_goal)
+                        for (var i in window)
+                            if (/^yaCounter\d+/.test(i))
+                                window[i].reachGoal(ya_goal);
+
+                    $form.find(".echo .success").fadeIn();
+
+                    $form[0].reset();
+                    
+                    setTimeout(function() {
+                        $form.find(".echo .success").slideUp();
+                        $.fancybox.close();
+                    }, 2000);
+                }
+                else if (answer == "nofill")
+                {
+                    $form.find(".echo .nofill").fadeIn();
+                }
+                else if (answer == "noagrees")
+                {
+                    $form.find(".echo .noagrees").fadeIn();
+                }
+                else
+                {
+                    $form.find(".echo .error").fadeIn();
+                }
+            }
+        });
+
+        return false;
+    });
+});
+
+/* End */
+;; /* /bitrix/templates/kolibri_corplite/components/bitrix/catalog/.default/bitrix/catalog.element/.default/script.js?1592856501611*/
+; /* /bitrix/components/kolibri/form.universal/script.js?15928566301749*/

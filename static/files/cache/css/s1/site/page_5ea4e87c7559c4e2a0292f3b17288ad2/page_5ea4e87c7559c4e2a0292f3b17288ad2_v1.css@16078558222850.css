@@ -1,0 +1,108 @@
+
+
+/* Start:/bitrix/templates/kolibri_corplite/components/bitrix/catalog/.default/style.css?15928565011167*/
+#catalog.default {
+    position: relative;
+    width: 100%;
+}
+#catalog.default .text-before {
+    margin-bottom: 25px;
+}
+#catalog.default .options {
+    font-size: 95%;
+    margin-bottom: 25px;
+}
+#catalog.default .options .items-count {
+    float: left;
+    margin-right: 50px;
+}
+#catalog.default .options .items-sorting {
+    float: left;
+}
+#catalog.default .options .items-sorting label {
+    margin-right: 5px;
+}
+#catalog.default .options .items-sorting a {
+    margin: 0 7px;
+    text-decoration: none;
+    border-bottom: 1px dashed;
+}
+#catalog.default .options .items-sorting a.selected {
+    border-bottom: none;
+}
+#catalog.default .options .items-sorting a.selected.asc:after {
+    font-family: 'FontAwesome';
+    padding-left: 6px;
+    content: '\f0d8';
+    vertical-align: top;
+}
+#catalog.default .options .items-sorting a.selected.desc:after {
+    font-family: 'FontAwesome';
+    padding-left: 6px;
+    content: '\f0d7';
+    vertical-align: top;
+}
+#catalog.default .options .items-view {
+    font-size: 150%;
+    float: right;
+}
+#catalog.default .options .items-view a.selected {
+    cursor: default;
+}
+#catalog.default .text-after {
+    margin-top: 25px;
+}
+/* End */
+
+
+/* Start:/bitrix/templates/kolibri_corplite/components/bitrix/catalog/.default/bitrix/catalog.section.list/.default/style.css?15928565011169*/
+#catalog-section-list.default {
+    position: relative;
+    width: 100%;
+}
+#catalog-section-list.default .elements {
+    line-height: 1.2;
+}
+#catalog-section-list.default .elements .element {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+#catalog-section-list.default .elements .element:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+#catalog-section-list.default .elements .element .picture {
+    float: left;
+    width: 200px;
+    margin-right: 25px;
+    text-align: center;
+}
+#catalog-section-list.default .elements .element .picture a {
+    display: block;
+    height: 100%;
+}
+#catalog-section-list.default .elements .element .picture a img {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+#catalog-section-list.default .elements .element .title {
+    font-size: 110%;
+    font-weight: 500;
+    margin: 2px 0 5px;
+}
+#catalog-section-list.default .elements .element .children {
+    margin: 0 0 8px;
+}
+#catalog-section-list.default .elements .element .children a {
+    font-size: 95%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* End */
+/* /bitrix/templates/kolibri_corplite/components/bitrix/catalog/.default/style.css?15928565011167 */
+/* /bitrix/templates/kolibri_corplite/components/bitrix/catalog/.default/bitrix/catalog.section.list/.default/style.css?15928565011169 */

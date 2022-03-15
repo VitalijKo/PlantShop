@@ -1,17 +1,12 @@
-FROM ubuntu:20.04
+FROM python:3.9
+
+ENV PYTHONUNBUFFERED 1
 
 ADD . /app
 WORKDIR /app
 
 COPY requirements.txt requirements.txt
 
-RUN apt-get update -y
-RUN apt-get install python3.9 -y
-RUN apt-get install python3-pip -y
-RUN python3.9 -m pip install --upgrade setuptools
-RUN apt-get install sudo ufw build-essential libpq-dev python3.9-dev libpython3.9-dev -y
-RUN python3.9 -m pip install -r requirements.txt
-RUN python3.9 -m pip install psycopg2-binary
-RUN sudo ufw allow 8000
+RUN pip install -r requirements.txt
 
 EXPOSE 8000

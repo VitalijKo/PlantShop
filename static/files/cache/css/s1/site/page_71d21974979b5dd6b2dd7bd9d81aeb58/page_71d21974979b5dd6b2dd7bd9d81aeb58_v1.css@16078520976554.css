@@ -1,0 +1,232 @@
+
+
+/* Start:/bitrix/templates/kolibri_corplite/components/bitrix/catalog.section.list/panel/style.css?15928565012147*/
+#catalog-section-list.panel {
+    position: relative;
+    width: 100%;
+}
+#catalog-section-list.panel .elements {
+    line-height: 1.2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: -5px;
+    margin-left: -5px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+#catalog-section-list.panel .elements .element {
+    position: relative;
+    overflow: hidden;
+    width: 33.3%;
+    height: 270px;
+    border: 5px solid transparent;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+#catalog-section-list.panel .elements .element .picture {
+    width: 100%;
+    height: 100%;
+    -webkit-transition:         transform .15s ease-in-out;
+    -webkit-transition: -webkit-transform .15s ease-in-out;
+            transition: -webkit-transform .15s ease-in-out;
+            transition:         transform .15s ease-in-out;
+            transition:         transform .15s ease-in-out, -webkit-transform .15s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#catalog-section-list.panel .elements .element:hover .picture {
+    -webkit-transform: scale(1.1,1.1);
+            transform: scale(1.1,1.1);
+}
+#catalog-section-list.panel .elements .element .title {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    display: inline-block;
+    -webkit-transition:         transform .15s ease-in-out;
+    -webkit-transition: -webkit-transform .15s ease-in-out;
+            transition: -webkit-transform .15s ease-in-out;
+            transition:         transform .15s ease-in-out;
+            transition:         transform .15s ease-in-out, -webkit-transform .15s ease-in-out;
+}
+#catalog-section-list.panel .elements .element .title span {
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 1px;
+}
+#catalog-section-list.panel .elements .element:hover .title {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+}
+
+/* End */
+
+
+/* Start:/bitrix/templates/kolibri_corplite/components/bitrix/catalog.top/table/style.css?15928565012146*/
+#catalog-top.table {
+    position: relative;
+    width: 100%;
+}
+#catalog-top.table .elements {
+    line-height: 1.2;
+}
+#catalog-top.table .elements .element {
+    width: 100%;
+	padding: 0 0 50px;
+}
+#catalog-top.table .elements .element > div {
+    position: relative;
+    margin: 2px;
+    padding: 20px;
+    -webkit-transition: box-shadow .15s ease-in-out;
+            transition: box-shadow .15s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0,0,0,.15);
+}
+#catalog-top.table .elements .element > div:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,.35);
+}
+#catalog-top.table .elements .element .stickers {
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    left: 0;
+}
+#catalog-top.table .elements .element .stickers span {
+    font-size: 80%;
+    display: table;
+    margin-bottom: 1px;
+    padding: 2px 8px;
+    border-left: 5px solid;
+    background-color: rgba(255,255,255,.9);
+}
+#catalog-top.table .elements .element .picture {
+    line-height: 135px;
+    max-width: 100%;
+    height: 135px;
+    text-align: center;
+}
+#catalog-top.table .elements .element .picture a {
+    display: block;
+    height: 100%;
+}
+#catalog-top.table .elements .element .picture img {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+#catalog-top.table .elements .element .title {
+    font-weight: 500;
+    margin-top: 10px;
+}
+#catalog-top.table .elements .element .title a {
+    display: block;
+}
+#catalog-top.table .elements .element .section {
+    font-size: 85%;
+    margin-top: 10px;
+}
+#catalog-top.table .elements .element .section span {
+    font-size: 90%;
+    color: #9e9e9e;
+}
+#catalog-top.table .elements .element .section a {
+    display: block;
+}
+#catalog-top.table .elements .element .price {
+    margin-top: 15px;
+}
+#catalog-top.table .elements .element .price .actual {
+    font-size: 130%;
+    font-weight: 500;
+}
+#catalog-top.table .elements .element .price .old {
+    font-size: 90%;
+    color: #9e9e9e;
+}
+#catalog-top.table .elements .element .price .missing {
+    font-size: 130%;
+    font-weight: 500;
+}
+
+/* End */
+
+
+/* Start:/bitrix/templates/kolibri_corplite/components/bitrix/system.pagenavigation/.default/style.css?1592856501311*/
+#pagenavigation.default {
+    position: relative;
+    width: 100%;
+    margin: 25px 0;
+    text-align: center;
+}
+#pagenavigation.default a {
+    display: inline-block;
+    padding: 3px 6px;
+    text-decoration: none;
+}
+#pagenavigation.default span {
+    display: inline-block;
+    padding: 3px 6px;
+}
+
+/* End */
+
+
+/* Start:/bitrix/templates/kolibri_corplite/components/bitrix/news.list/info_line/style.css?15928565011016*/
+#news-list.info_line {
+    position: relative;
+    width: 100%;
+}
+#news-list.info_line .elements {
+    line-height: 1.2;
+}
+#news-list.info_line .elements .element {
+    margin: 20px 0;
+}
+#news-list.info_line .elements .element:last-child {
+    margin-bottom: 0;
+}
+#news-list.info_line .elements .element .picture {
+    float: left;
+    width: 110px;
+    margin-right: 25px;
+    text-align: center;
+}
+#news-list.info_line .elements .element .picture a {
+    display: block;
+    height: 100%;
+}
+#news-list.info_line .elements .element .picture a img {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+#news-list.info_line .elements .element .date {
+    display: block;
+}
+#news-list.info_line .elements .element .date span {
+    font-size: 80%;
+    font-weight: 500;
+}
+#news-list.info_line .elements .element .title {
+    margin-top: 2px;
+}
+#news-list.info_line .elements .element .title .section {
+    font-weight: 500;
+}
+
+/* End */
+/* /bitrix/templates/kolibri_corplite/components/bitrix/catalog.section.list/panel/style.css?15928565012147 */
+/* /bitrix/templates/kolibri_corplite/components/bitrix/catalog.top/table/style.css?15928565012146 */
+/* /bitrix/templates/kolibri_corplite/components/bitrix/system.pagenavigation/.default/style.css?1592856501311 */
+/* /bitrix/templates/kolibri_corplite/components/bitrix/news.list/info_line/style.css?15928565011016 */

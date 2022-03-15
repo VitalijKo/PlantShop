@@ -1,0 +1,99 @@
+
+
+/* Start:/bitrix/templates/kolibri_corplite/components/bitrix/news/.default/style.css?159285650163*/
+#news.default {
+    position: relative;
+    width: 100%;
+}
+
+/* End */
+
+
+/* Start:/bitrix/templates/kolibri_corplite/components/bitrix/system.pagenavigation/.default/style.css?1592856501311*/
+#pagenavigation.default {
+    position: relative;
+    width: 100%;
+    margin: 25px 0;
+    text-align: center;
+}
+#pagenavigation.default a {
+    display: inline-block;
+    padding: 3px 6px;
+    text-decoration: none;
+}
+#pagenavigation.default span {
+    display: inline-block;
+    padding: 3px 6px;
+}
+
+/* End */
+
+
+/* Start:/bitrix/templates/kolibri_corplite/components/bitrix/news/.default/bitrix/news.list/.default/style.css?15928565011497*/
+#news-list.default {
+    position: relative;
+    width: 100%;
+}
+#news-list.default .elements {
+    line-height: 1.2;
+}
+#news-list.default .elements .element {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+#news-list.default .elements .element:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+#news-list.default .elements .element .picture {
+    float: left;
+    width: 200px;
+    margin-right: 25px;
+    text-align: center;
+}
+#news-list.default .elements .element .picture a {
+    display: block;
+    height: 100%;
+}
+#news-list.default .elements .element .picture img {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+#news-list.default .elements .element .title {
+    font-size: 110%;
+    font-weight: 500;
+    margin: 2px 0 5px;
+}
+#news-list.default .elements .element .date {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+#news-list.default .elements .element .date span {
+    font-size: 75%;
+    font-weight: 500;
+    margin-right: 7px;
+    padding: 3px 7px;
+    border-radius: 1px;
+}
+#news-list.default .elements .element .preview-text {
+    min-height: 1px;
+}
+#news-list.default .elements .element .buttons {
+    margin-top: 10px;
+}
+#news-list.default .elements .element .section {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+#news-list.default .elements .element .section a {
+    font-size: 85%;
+}
+
+/* End */
+/* /bitrix/templates/kolibri_corplite/components/bitrix/news/.default/style.css?159285650163 */
+/* /bitrix/templates/kolibri_corplite/components/bitrix/system.pagenavigation/.default/style.css?1592856501311 */
+/* /bitrix/templates/kolibri_corplite/components/bitrix/news/.default/bitrix/news.list/.default/style.css?15928565011497 */
