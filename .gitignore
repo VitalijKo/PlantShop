@@ -3,4 +3,8 @@
 __pycache__
 static/images
 .idea
+<<<<<<< HEAD
 .DS_Store
+=======
+.DS_Store
+>>>>>>> a5de7b2b8f2f3983c0465e48b7c6da5bb05c1ad6
