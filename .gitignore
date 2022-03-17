@@ -2,4 +2,5 @@
 *~
 __pycache__
 static/images
+.idea
 .DS_Store
